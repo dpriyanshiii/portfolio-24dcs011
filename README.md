@@ -1,16 +1,99 @@
-# React + Vite
+# Student Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React portfolio application built with Vite, featuring reusable components, props-based data flow, and client-side routing with React Router.
 
-Currently, two official plugins are available:
+**Author:** Priyanshi Dalwadi
+**Course:** Advanced Web Development Frameworks (ITUE301)
+**Institution:** CHARUSAT — DEPSTAR CSE
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18+
+- Vite
+- React Router v6
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/dpriyanshiii/student-portfolio.git
+cd student-portfolio
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## Project Structure
+
+```
+student-portfolio/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── About.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Footer.jsx
+│   │   └── NavBar.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Projects.jsx
+│   │   └── Contact.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── package.json
+└── README.md
+```
+
+---
+
+## Practical 1: Introduction to React and Component Architecture
+
+- Set up a React project using Vite
+- Built 4 reusable functional components: `Header`, `About`, `Skills`, `Footer`
+- Composed all components into a single-page layout inside `App.jsx`
+- Used **props** to pass a `name` into `Header` and a `skillList` array into `Skills`
+
+## Practical 2: State Management and Routing in React
+
+- Installed and configured **React Router v6** (`react-router-dom`)
+- Wrapped the app with `BrowserRouter` in `main.jsx`
+- Added a `NavBar` component using `<Link>` (no full page reloads), with active-route highlighting
+- Created 3 routes:
+  - `/` → `Home.jsx`
+  - `/projects` → `Projects.jsx`
+  - `/contact` → `Contact.jsx`
+- Used **two `useState` hooks**:
+  - One to toggle visibility of a tip on the Home page
+  - One for a controlled input on the Contact page, updating live as the user types
+
+---
+
+## Verified
+
+- App runs with `npm run dev` with no console errors
+- All routes navigate correctly without page reloads
+- Props and state update the UI correctly
+
+---
+
+## License
+
+This project is for academic purposes as part of ITUE301 coursework.
